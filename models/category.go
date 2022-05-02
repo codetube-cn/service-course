@@ -7,9 +7,10 @@ import (
 // Category 课程分类模型
 type Category struct {
 	gorm.Model
+	ID          uint   `gorm:"primarykey"`
 	ParentId    uint   //上级分类
 	Name        string //分类名称
-	Ename       string //分类英文名称
+	UrlName     string //分类 URL 名称
 	Title       string //分类页面标题
 	Keywords    string //分类页面 keywords
 	Description string //分类页面 description
